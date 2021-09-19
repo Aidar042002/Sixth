@@ -13,7 +13,7 @@ public class FieldCheck {
                 return false;
             if (input.equalsIgnoreCase("да"))
                 return true;
-            throw new UncorrectFieldException("ввод неверный " + fieldName + ".");
+            throw new InvalidFieldException("ввод неверный " + fieldName + ".");
         };
     }
 

@@ -19,7 +19,7 @@ public class EnumFieldBuilder<T extends Enum<T>> {
                 if (input.equalsIgnoreCase(enumValue.name()))
                     return enumValue;
             }
-            throw new UncorrectFieldException(fieldName);
+            throw new InvalidFieldException(fieldName);
         };
         inputProvider = new InputProvider<>("Введите " + fieldName + " (" + possibleVariants + "): ", validator);
     }

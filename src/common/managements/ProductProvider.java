@@ -75,8 +75,10 @@ public class ProductProvider {
                     location.setX(FieldCheck.locationXValidator.get(tokens.get(14)));
                     location.setY(FieldCheck.locationYValidator.get(tokens.get(15)));
                     location.setZ(FieldCheck.locationZValidator.get(tokens.get(16)));
+                    address.setLocation(location);
                 }
             }
+            product.setManufacturer(manufacturer);
         }
         return product;
     }

@@ -48,7 +48,7 @@ public class Main {
         connectionSender = null;
         while (connectionSender == null) {
             try {
-                connectionSender = new ConnectionSender(1022);
+                connectionSender = new ConnectionSender(1092);
             } catch (IOException exception) {
                 System.out.println("Не смог установить соединение с сервером:");
                 exception.printStackTrace();

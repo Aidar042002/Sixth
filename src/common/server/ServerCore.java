@@ -29,8 +29,8 @@ public class ServerCore {
                 long ID = collectionManager.add(product);
                 return "Элемент успешно добавлен в коллекцию (ID: " + ID + ").";
             }
-            return "А вот у работника с ID " + maxSoFar.get().getId() + " зарплата не меньше, поэтому я ничего в " +
-                    "коллекцию не добавлю.";
+            return "У продукта с ID " + maxSoFar.get().getId() + " стоимость не меньше, в " +
+                    "коллекцию не добавляется.";
         });
         availableFunctions.put("remove_greater", request -> {
             Product product = request.getProduct();
@@ -39,8 +39,8 @@ public class ServerCore {
                 long ID = collectionManager.add(product);
                 return "Элемент успешно добавлен в коллекцию (ID: " + ID + ").";
             }
-            return "А вот у работника с ID " + minSoFar.get().getId() + " зарплата не больше, поэтому я ничего в коллекцию " +
-                    "не добавлю.";
+            return "У продукта с ID " + minSoFar.get().getId() + " стоимость не больше, в коллекцию " +
+                    "не добавлется.";
         });
         availableFunctions.put("clear", request -> {
             collectionManager.clear();

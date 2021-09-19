@@ -11,7 +11,7 @@ public class Main {
         RequestHandler requestHandler = new RequestHandler();
         ConnectionReceiver connectionReceiver;
         try {
-            connectionReceiver = new ConnectionReceiver(1022, requestHandler::handle);
+            connectionReceiver = new ConnectionReceiver(1092, requestHandler::handle);
         } catch (IOException exception) {
             System.out.println("Не смог инициализировать модуль приёма подключений:");
             exception.printStackTrace();
